@@ -12,7 +12,10 @@ Python Bikeshare Assessment
 
 ### Description
 The project involved coding a program that will allow a user to view data for the usage of a bikesharing system in three major american cities.
-
+The program askes the user to enter inputs for the city, month and day of the week they wish to see data from.
+The user's inputs are used as filters that the code applies to the data it has access to in order to retrieve a number of statistics such as the most common hour for travel, among other stats.
+After the filtered data is shown, the user is asked if they wish to see raw unfiltered data which is shown five lines at a time. 
+The user then has a final option of restarting or closing the program.
 
 ### Files used
 bikeshare_2.py
