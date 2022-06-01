@@ -2,6 +2,7 @@
 
 ### Date created
 Python File Created: 5/24/2022
+Python File Completed: 5/30/2022
 Readme File Created: 5/31/2022
 
 
