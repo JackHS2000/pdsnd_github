@@ -17,6 +17,9 @@ The project involved coding a program that will allow a user to view data for th
 ### Files used
 bikeshare_2.py
 
+### Software
+This project was coded with Python 3.10 and has not been tested on earlier versions of Python.
+It is recommended to use Python 3.10 when running this program as problems may be encountered when running on earlier versions of Python.
 
 ### Credits
 #Used for gaining clarification on using value.count function
