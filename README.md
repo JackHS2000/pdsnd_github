@@ -19,6 +19,9 @@ The user then has a final option of restarting or closing the program.
 
 ### Files used
 bikeshare_2.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Software
 This project was coded with Python 3.10 and has not been tested on earlier versions of Python.
