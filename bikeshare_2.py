@@ -23,35 +23,35 @@ def get_filters():
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     #Print statement informs the user to select a city and outlines the choices before input is requested, .lower ensures a user input will be recongized even if the user writes out capital letters
-    print("Which city would you like to analyze? You have the choice of Chicago, New York City or Washington")
-    city =input("> ").lower()
+    city = input("Which city would you like to analyze? You have the choice of Chicago, New York City or Washington\n")
+
 
     #While loop to run in the event of a invalid input being entered
-    while (city not in CITY_DATA):
-     print ('Invalid Input!: Incorrect City Name')
-     print("Which city would you like to analyze? You have the choice of Chicago, New York City or Washington")
-     city =input("> ").lower()
+    while (city.lower() not in CITY_DATA):
+        print ('Invalid Input!: Incorrect City Name')
+        city =input("Which city would you like to analyze? You have the choice of Chicago, New York City or Washington\n")
+
 
 
     # get user input for month (all, january, february, ... , june)
-    print("Which month would you like to analyze? You have the choice of the first six months of the year: January, February, March, April, May and June. If you wish to see data from all months instead of just one, simply type all")
-    month =input("> ").lower()
+    month =input("Which month would you like to analyze? You have the choice of the first six months of the year: January, February, March, April, May and June. If you wish to see data from all months instead of just one, simply type all\n")
+
 
     #While loop to account for user enterting a specific month or all to see data for every month
-    while (month != 'all' and month not in MONTHS):
-     print ('Invalid Input!: Incorrect Month Name')
-     print("Which month would you like to analyze? You have the choice of the first six months of the year: January, February, March, April, May and June. If you wish to see data from all months instead of just one, simply type all")
-     month =input("> ").lower()
+    while (month.lower() != 'all' and month.lower() not in MONTHS):
+        print ('Invalid Input!: Incorrect Month Name')
+        month =input("Which month would you like to analyze? You have the choice of the first six months of the year: January, February, March, April, May and June. If you wish to see data from all months instead of just one, simply type all\n")
+
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    print("Which day of the week would you like to analyze? If you wish to see data from every day of the week instead of just one, simply type all")
-    day =input("> ").lower()
+    day =input("Which day of the week would you like to analyze? If you wish to see data from every day of the week instead of just one, simply type all\n")
+
 
     #day equavient of month while loop
-    while (day != 'all' and day not in DAYS):
+    while (day.lower() != 'all' and day.lower() not in DAYS):
      print ('Invalid Input!: Incorrect Day Name')
-     print("Which day of the week would you like to analyze? If you wish to see data from every day of the week instead of just one, simply type all")
-     day =input("> ").lower()
+     day =input("Which day of the week would you like to analyze? If you wish to see data from every day of the week instead of just one, simply type all\n")
+
 
     print('-'*40)
     return city, month, day
@@ -70,7 +70,7 @@ def load_data(city, month, day):
     """
 
     #Loads the selected city's data into a dataframe
-    df = pd.read_csv(CITY_DATA[city])
+    df = pd.read_csv(CITY_DATA[city.lower()])
 
     #Converts the start time column into datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -207,7 +207,7 @@ def raw_data(df):
     #tells the program to start locating from the first row of data
     start_loc = 0
 
-    #The while loop continues to loop as long as yes is inputted. it will print five rows and each print function adds 5 to the start_loc value thus the code knows to constantly print the next five rows 
+    #The while loop continues to loop as long as yes is inputted. it will print five rows and each print function adds 5 to the start_loc value thus the code knows to constantly print the next five rows
     #The user is again asked if they wish to see more data, if they say yes they will say the next 5 rows due to the start_loc being updated everytime the while loop repeats
     #if the user types no in response to either the initial input
     while view_data== 'yes':
