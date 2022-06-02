@@ -160,6 +160,13 @@ def trip_duration_stats(df):
     mean_time = df['Trip Duration'].mean()
     print('The average/mean duration of trips is:', mean_time, 'seconds')
 
+    #displays the shortest and longest travel times by applying min and max to the trip duration column
+    short_trip = df['Trip Duration'].min()
+    print('The shortest trip duration is:', short_trip, 'seconds')
+
+    long_trip = df['Trip Duration'].max()
+    print('The longest trip duration is:', long_trip, 'seconds')
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
